@@ -5,7 +5,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        docker ps
+        sh 'docker ps'
       }
     }
   }
