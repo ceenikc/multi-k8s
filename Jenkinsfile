@@ -8,13 +8,13 @@ pipeline {
 
   stages {
 
-    stage('Test') {
-      steps {
-        sh 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
-        sh 'docker build -t ceenikc/react-test -f ./client/Dockerfile.dev ./client'
-        sh 'docker push ceenikc/react-test'
-      }
-    }
+    // stage('Test') {
+    //   steps {
+    //     sh 'echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin'
+    //     sh 'docker build -t ceenikc/react-test -f ./client/Dockerfile.dev ./client'
+    //     sh 'docker push ceenikc/react-test'
+    //   }
+    // }
 
     stage("Build") {
       steps {

@@ -1,4 +1,3 @@
-echo "hello-world1"
-echo "hello-world2"
-echo "hello-world3"
-echo "hello-world4"
+curl https://sdk.cloud.google.com | bash > /dev/null
+source $HOME/google-cloud-sdk/path.bash.inc
+gcloud
