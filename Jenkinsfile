@@ -21,7 +21,7 @@ pipeline {
         docker { image "google/cloud-sdk" }
       }
       steps {
-        sh 'gcloud'
+        sh 'gcloud version'
       }
     }
   }
