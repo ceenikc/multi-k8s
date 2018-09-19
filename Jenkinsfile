@@ -15,5 +15,11 @@ pipeline {
         sh 'docker push ceenikc/react-test'
       }
     }
+
+    stage("Build") {
+      steps {
+        sh './test.sh'
+      }
+    }
   }
 }
