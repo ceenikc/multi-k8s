@@ -17,9 +17,11 @@ pipeline {
     // }
 
     stage("Build") {
+      agent {
+        docker { image "google/cloud-sdk" }
+      }
       steps {
-        sh 'chmod +x ./test.sh'
-        sh './test.sh'
+        sh 'gcloud'
       }
     }
   }
