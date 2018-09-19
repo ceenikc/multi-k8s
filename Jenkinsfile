@@ -5,6 +5,7 @@ pipeline {
     DOCKER_USERNAME = credentials("DOCKER_USERNAME")
     DOCKER_PASSWORD = credentials("DOCKER_PASSWORD")
     GOOGLE_AUTH = credentials("google_auth")
+    TEST = "test text"
   }
 
   stages {
