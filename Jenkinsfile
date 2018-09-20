@@ -5,6 +5,7 @@ pipeline {
     DOCKER_USERNAME = credentials("DOCKER_USERNAME")
     DOCKER_PASSWORD = credentials("DOCKER_PASSWORD")
     GOOGLE_AUTH = credentials("google_auth")
+    SHA = $(git rev-parse HEAD)
   }
 
   stages {
@@ -21,6 +22,7 @@ pipeline {
       steps {
         sh 'chmod +x ./test.sh'
         sh './test.sh'
+        sh 'echo $SHA'
       }
     }
 
